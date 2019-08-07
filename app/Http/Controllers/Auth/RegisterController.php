@@ -52,6 +52,10 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+            'geetest_challenge' => ['required','geetest'],
+        ],[
+            'geetest_challenge.required' => config('geetest.client_fail_alert'),
+            'geetest_challenge.geetest' => config('geetest.server_fail_alert'),
         ]);
     }
 

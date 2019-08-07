@@ -136,6 +136,8 @@ return [
 
     'providers' => [
 
+        Germey\Geetest\GeetestServiceProvider::class,
+
         /*
          * Laravel Framework Service Providers...
          */
@@ -189,6 +191,7 @@ return [
     */
 
     'aliases' => [
+        'Geetest' => Germey\Geetest\Geetest::class,
 
         'App' => Illuminate\Support\Facades\App::class,
         'Arr' => Illuminate\Support\Arr::class,
