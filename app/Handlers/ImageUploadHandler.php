@@ -53,7 +53,7 @@ class ImageUploadHandler
         $image = Image::make($file_path);
 
         // 进行大小调整的操作
-        $image->resize($max_width, null, function ($constraint) {
+        $image->resize($max_width,null, function ($constraint) {
 
             // 设定宽度是 $max_width，高度等比例双方缩放
             $constraint->aspectRatio();
