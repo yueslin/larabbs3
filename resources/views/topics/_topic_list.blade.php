@@ -31,9 +31,21 @@
               <i class="far fa-user"></i>
               {{ $topic->user->name }}
             </a>
-            <span> • </span>
-            <i class="far fa-clock"></i>
-            <span class="timeago" title="最后活跃于：{{ $topic->updated_at }}">{{ $topic->updated_at->diffForHumans() }}</span>
+
+            @if(if_query("order",'default') || !if_uri_pattern("order="))
+
+              <span> • </span>
+              <i class="far fa-clock"></i>
+              <span class="timeago" title="最后活跃于：{{ $topic->updated_at }}">最后活跃于：{{ $topic->updated_at->diffForHumans() }}</span>
+
+            @elseif(if_query("order","recent"))
+
+              <span> • </span>
+              <i class="far fa-clock"></i>
+              <span class="timeago" title="发布于：{{ $topic->created_at }}">创建于：{{ $topic->created_at->diffForHumans() }}</span>
+
+            @endif
+
           </small>
 
         </div>
