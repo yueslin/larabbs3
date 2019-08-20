@@ -44,4 +44,8 @@ return [
         ],
     ],
 
+    'baidu_translate' => [
+        'appid' => env('BAIDU_TRANSLATE_APPID','20180524000165988'),
+        'key'   => env('BAIDU_TRANSLATE_KEY','sIL6klHYD8RJ3LHdEWxV'),
+    ],
 ];
