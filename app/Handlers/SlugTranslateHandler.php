@@ -10,7 +10,6 @@ class SlugTranslateHandler
 
     public function translate($text)
     {
-
         // 百度api 不可用，直接使用拼音翻译
         return $this->pinyin($text);
 
