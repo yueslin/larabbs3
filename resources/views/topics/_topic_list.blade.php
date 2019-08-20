@@ -32,7 +32,7 @@
               {{ $topic->user->name }}
             </a>
 
-            @if(if_query("order",'default') || !if_uri_pattern("order="))
+            @if(if_query("order",'default') || !request()->has('order'))
 
               <span> • </span>
               <i class="far fa-clock"></i>
