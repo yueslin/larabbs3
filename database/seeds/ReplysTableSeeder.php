@@ -21,10 +21,6 @@ class ReplysTableSeeder extends Seeder
                 $reply->topic_id = $faker->randomElement($topic_ids);
             });
 
-
-        dd($replys);
-
-
         Reply::insert($replys->toArray());
     }
 
