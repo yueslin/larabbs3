@@ -26,14 +26,14 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
 	{
-		\App\Models\User::observe(\App\Observers\UserObserver::class);
+        // 注册模型观察器
+        \App\Models\User::observe(\App\Observers\UserObserver::class);
 		\App\Models\Reply::observe(\App\Observers\ReplyObserver::class);
+		\App\Models\Topic::observe(\App\Observers\TopicObserver::class);
 
         // 设置迁移文件 数据库字段默认长度
         Schema::defaultStringLength(250);
 
-        // 注册模型观察器
-        Topic::observe(TopicObserver::class);
 
     }
 }
