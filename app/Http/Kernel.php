@@ -37,7 +37,6 @@ class Kernel extends HttpKernel
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             \App\Http\Middleware\EnsureEmailIsVerifed::class,      // <<--- 只需添加这一行
         ],
-
         'api' => [
             'throttle:60,1',
             'bindings',

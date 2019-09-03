@@ -34,6 +34,5 @@ class AppServiceProvider extends ServiceProvider
         // 设置迁移文件 数据库字段默认长度
         Schema::defaultStringLength(250);
 
-
     }
 }
