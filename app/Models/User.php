@@ -28,29 +28,12 @@ class User extends Authenticatable implements MustVerifyEmailContract
         $this->laravelNotify($instance);
     }
 
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
     protected $fillable = [
         'name', 'email', 'password','introduction','avatar'
     ];
-
-    /**
-     * The attributes that should be hidden for arrays.
-     *
-     * @var array
-     */
     protected $hidden = [
         'password', 'remember_token',
     ];
-
-    /**
-     * The attributes that should be cast to native types.
-     *
-     * @var array
-     */
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
@@ -65,12 +48,23 @@ class User extends Authenticatable implements MustVerifyEmailContract
         return $this->hasMany(Reply::class);
     }
 
-
     // 策略判断
     public function isAuthorOf($model)
     {
         return $this->id == $model->user_id;
     }
+
+
+    public function markAsRead()
+    {
+        $this->notification_count = 0;
+        $this->save();
+
+        // Notifiable -> HasDatabaseNotifications 里的方法，用于更新通知时间
+        $this->unreadNotifications->markAsRead();
+    }
+
+
 
 
 }

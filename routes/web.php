@@ -39,7 +39,4 @@ Route::post('upload_image', 'TopicsController@uploadImage')->name('topics.upload
 
 Route::resource('replies', 'RepliesController', ['only' => ['store', 'destroy']]);
 
-
-Route::any("test/put",'TestController@put');
-Route::any("test/get",'TestController@get');
-Route::any("test/forget",'TestController@forget');
+Route::resource('notifications', 'NotificationsController', ['only' => ['index']]);
