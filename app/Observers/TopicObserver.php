@@ -5,6 +5,7 @@ namespace App\Observers;
 use App\Handlers\SlugTranslateHandler;
 use App\Jobs\TranslateSlug;
 use App\Models\Topic;
+use Illuminate\Support\Facades\DB;
 
 // creating, created, updating, updated, saving,
 // saved,  deleting, deleted, restoring, restored
@@ -17,12 +18,8 @@ class TopicObserver
     {
         // clean 过滤 XSS 注入
         $topic->body = clean($topic->body, 'user_topic_body');
-
         // 生成话题摘录
         $topic->excerpt = make_excerpt($topic->body);
-
-
-
     }
 
     // 插入时候触发
@@ -33,6 +30,11 @@ class TopicObserver
 
             dispatch(new TranslateSlug($topic));
         }
+    }
+
+    public function deleted(Topic $topic)
+    {
+        DB::table('replies')->where('topic_id',$topic->id)->delete();
     }
 
 
