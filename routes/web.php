@@ -1,5 +1,21 @@
 <?php
 
+
+use App\Models\Topic;
+use Carbon\Carbon;
+use Illuminate\Support\Facades\DB;
+
+Route::get("test",function (){
+
+    $topic_users = Topic::query()->select(DB::raw('user_id, count(*) as topic_count'))
+        // ->where('created_at', '>=', Carbon::now()->subDays(7))
+        // ->groupBy('user_id')
+        ->get();
+    dd($topic_users);
+
+});
+
+
 Route::get("/","PagesController@root")->name("root");
 
 // 用户身份验证相关的路由
