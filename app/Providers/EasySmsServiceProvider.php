@@ -25,17 +25,16 @@ class EasySmsServiceProvider extends ServiceProvider
     public function boot()
     {
         // 腾讯云
-        $this->app->singleton(EasySms::class,function ($app){
+        $this->app->singleton(SmsSingleSender::class,function ($app){
             $deploy = config('services.qcloudsms');
             return new SmsSingleSender($deploy['appid'],$deploy['appkey']);
         });
         //
-        $this->app->alias(EasySms::class,'qcloudsms');
+        $this->app->alias(SmsSingleSender::class,'qcloudsms');
 
-
-        $this->app->singleton(EasySms::class,function ($app){
-            return new EasySms(config('easysms'));
-        });
-        $this->app->alias(EasySms::class,'easysms');
+        // $this->app->singleton(EasySms::class,function ($app){
+        //     return new EasySms(config('easysms'));
+        // });
+        // $this->app->alias(EasySms::class,'easysms');
     }
 }

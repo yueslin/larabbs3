@@ -15,13 +15,23 @@ Route::get("send/qcloudsms",function (){
     $smsSign = "test"; // NOTE: 这里的签名只是示例，请使用真实的已申请的签名，签名参数使用的是`签名内容`，而不是`签名ID`
     $ssender = app("qcloudsms");
     $params = ["5678"];
+
+
     try {
-        $result = $ssender->sendWithParam("86", $phoneNumbers[0], $templateId,$params, $smsSign);  // 签名参数未提供或者为空时，会使用默认签名发送短信
-        dd(json_decode($result));
+        $result = $ssender->send(0, "86", $phoneNumbers[0],
+            "【腾讯云】您的验证码是: 5678","", "");
+        $rsp = json_decode($result);
         echo $result;
     } catch(\Exception $e) {
-        dd($e);
+        echo var_dump($e);
     }
+    // try {
+    //     $result = $ssender->sendWithParam("86", $phoneNumbers[0], $templateId,$params, $smsSign);  // 签名参数未提供或者为空时，会使用默认签名发送短信
+    //     dd(json_decode($result));
+    //     echo $result;
+    // } catch(\Exception $e) {
+    //     dd($e);
+    // }
 });
 
 
