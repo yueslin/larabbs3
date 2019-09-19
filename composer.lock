@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "b9badcf148f2b356fbc3b43c64e77032",
+    "content-hash": "fb1ded4e074f7139a907900967661499",
     "packages": [
         {
             "name": "caouecs/laravel-lang",
@@ -2048,6 +2048,54 @@
             "time": "2019-09-02T21:07:33+00:00"
         },
         {
+            "name": "overtrue/easy-sms",
+            "version": "1.1.18",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/overtrue/easy-sms.git",
+                "reference": "b3c16dec37354e24a9dbbb42bef83649a688fc4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/overtrue/easy-sms/zipball/b3c16dec37354e24a9dbbb42bef83649a688fc4d",
+                "reference": "b3c16dec37354e24a9dbbb42bef83649a688fc4d",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require": {
+                "ext-json": "*",
+                "guzzlehttp/guzzle": "^6.2",
+                "php": ">=5.6"
+            },
+            "require-dev": {
+                "mockery/mockery": "1.2.3",
+                "phpunit/phpunit": "^5.7 || ^7.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Overtrue\\EasySms\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "overtrue",
+                    "email": "i@overtrue.me"
+                }
+            ],
+            "description": "The easiest way to send short message.",
+            "time": "2019-09-12T08:56:35+00:00"
+        },
+        {
             "name": "overtrue/laravel-lang",
             "version": "3.0.17",
             "source": {
@@ -2779,6 +2827,48 @@
                 "shell"
             ],
             "time": "2018-10-13T15:16:03+00:00"
+        },
+        {
+            "name": "qcloudsms/qcloudsms_php",
+            "version": "v0.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/qcloudsms/qcloudsms_php.git",
+                "reference": "48822045772d343b93c3d505d8a187cd51153c5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/qcloudsms/qcloudsms_php/zipball/48822045772d343b93c3d505d8a187cd51153c5a",
+                "reference": "48822045772d343b93c3d505d8a187cd51153c5a",
+                "shasum": "",
+                "mirrors": [
+                    {
+                        "url": "https://mirrors.aliyun.com/composer/dists/%package%/%reference%.%type%",
+                        "preferred": true
+                    }
+                ]
+            },
+            "require-dev": {
+                "sami/sami": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Qcloud\\Sms\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "qcloud sms php sdk",
+            "keywords": [
+                "php",
+                "qcloud",
+                "sdk",
+                "sms"
+            ],
+            "time": "2018-09-19T07:19:17+00:00"
         },
         {
             "name": "ralouphie/getallheaders",

@@ -4,15 +4,38 @@
 use App\Models\Topic;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
+use Qcloud\Sms\SmsSingleSender;
 
-Route::get("test",function (){
+Route::get("send/qcloudsms",function (){
 
-    $topic_users = Topic::query()->select(DB::raw('user_id, count(*) as topic_count'))
-        // ->where('created_at', '>=', Carbon::now()->subDays(7))
-        // ->groupBy('user_id')
-        ->get();
-    dd($topic_users);
+    // 需要发送短信的手机号码
+    $phoneNumbers = ["18390757710"];
+    // 短信模板ID，需要在短信应用中申请
+    $templateId = 98678;  // NOTE: 这里的模板ID`7839`只是一个示例，真实的模板ID需要在短信控制台中申请
+    $smsSign = "test"; // NOTE: 这里的签名只是示例，请使用真实的已申请的签名，签名参数使用的是`签名内容`，而不是`签名ID`
+    $ssender = app("qcloudsms");
+    $params = ["5678"];
+    try {
+        $result = $ssender->sendWithParam("86", $phoneNumbers[0], $templateId,$params, $smsSign);  // 签名参数未提供或者为空时，会使用默认签名发送短信
+        dd(json_decode($result));
+        echo $result;
+    } catch(\Exception $e) {
+        dd($e);
+    }
+});
 
+
+Route::get("send/easysms",function (){
+    $sms  =  app('easysms');
+    try {
+        $sms->send(18390757710, [
+            'template' => 98678,
+            'data' => [10000],
+        ]);
+    } catch (\Overtrue\EasySms\Exceptions\NoGatewayAvailableException $exception) {
+        $message = $exception->getException('qcloud')->getMessage();
+        dd($message);
+    }
 });
 
 

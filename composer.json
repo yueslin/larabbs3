@@ -18,9 +18,11 @@
         "laravel/framework": "5.8.*",
         "laravel/tinker": "^1.0",
         "mews/purifier": "~2.0",
+        "overtrue/easy-sms": "^1.1",
         "overtrue/laravel-lang": "~3.0",
         "overtrue/pinyin": "~3.0",
         "predis/predis": "~1.1",
+        "qcloudsms/qcloudsms_php": "^0.1.4",
         "spatie/laravel-permission": "~2.29",
         "summerblue/administrator": "~1.1"
     },

@@ -48,4 +48,12 @@ return [
         'appid' => env('BAIDU_TRANSLATE_APPID','20180524000165988'),
         'key'   => env('BAIDU_TRANSLATE_KEY','sIL6klHYD8RJ3LHdEWxV'),
     ],
+
+
+    'qcloudsms' => [
+        // 短信应用SDK AppID
+        "appid" => env('QCLOUD_SMS_APP_ID','1400078391'),
+        // 短信应用SDK AppKey
+        "appkey" => env('QCLOUD_SMS_APP_KEY','1a885bc127a36fa1819da420722e2059'),
+    ]
 ];
