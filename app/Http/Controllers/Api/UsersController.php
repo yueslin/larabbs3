@@ -18,6 +18,7 @@ class UsersController extends Controller
             return $this->response->error('验证码已失效',422);
         }
 
+        //hash_equals 可防止时序攻击的字符串比较，不会因为比对字符串前几位不同而出现返回时间差
         if(!hash_equals($verifyData['code'],$request->verification_code)){
             // 返回401
             return $this->response->errorUnauthorized('验证码错误');
