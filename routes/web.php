@@ -6,6 +6,10 @@ use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Qcloud\Sms\SmsSingleSender;
 
+Route::get('test',function (){
+    phpinfo();
+});
+
 Route::get("send/qcloudsms",function (){
 
     // 需要发送短信的手机号码

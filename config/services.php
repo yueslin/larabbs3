@@ -44,9 +44,17 @@ return [
         ],
     ],
 
+    // 百度翻译
     'baidu_translate' => [
         'appid' => env('BAIDU_TRANSLATE_APPID','20180524000165988'),
         'key'   => env('BAIDU_TRANSLATE_KEY','sIL6klHYD8RJ3LHdEWxV'),
+    ],
+
+
+    'weixin' => [
+        'client_id' => env('WEIXIN_KEY'),
+        'client_secret' => env('WEIXIN_SECRET'),
+        'redirect' => env('WEIXIN_REDIRECT_URI'),
     ],
 
 
