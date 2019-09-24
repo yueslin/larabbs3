@@ -56,6 +56,7 @@ class User extends Authenticatable implements MustVerifyEmailContract, JWTSubjec
     // 策略判断
     public function isAuthorOf($model)
     {
+
         return $this->id == $model->user_id;
     }
 

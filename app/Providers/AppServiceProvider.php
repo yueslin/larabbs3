@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use App\Models\Topic;
 use App\Observers\TopicObserver;
+use Dingo\Api\Facade\API;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,6 +17,17 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
+
+        if (app()->isLocal()) {
+            $this->app->register(ServiceProvider::class);
+        }
+
+        API::error(function  (\Symfony\Component\HttpKernel\Exception\NotFoundHttpException  $exception)  {
+            throw new \Symfony\Component\HttpKernel\Exception\HttpException(404,  '404 Not Found');
+        });
+        API::error(function (\Illuminate\Auth\Access\AuthorizationException $exception) {
+            abort(403, $exception->getMessage());
+        });
 
     }
 
