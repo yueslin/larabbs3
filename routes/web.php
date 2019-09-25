@@ -1,14 +1,9 @@
 <?php
 
-
 use App\Models\Topic;
 use Carbon\Carbon;
 use Illuminate\Support\Facades\DB;
 use Qcloud\Sms\SmsSingleSender;
-
-Route::get('test',function (){
-    phpinfo();
-});
 
 Route::get("send/qcloudsms",function (){
 
@@ -19,7 +14,6 @@ Route::get("send/qcloudsms",function (){
     $smsSign = "test"; // NOTE: 这里的签名只是示例，请使用真实的已申请的签名，签名参数使用的是`签名内容`，而不是`签名ID`
     $ssender = app("qcloudsms");
     $params = ["5678"];
-
 
     try {
         $result = $ssender->send(0, "86", $phoneNumbers[0],
