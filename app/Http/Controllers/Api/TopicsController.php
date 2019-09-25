@@ -30,7 +30,7 @@ class TopicsController extends Controller
         }
 
         $topics = $query->paginate(20);
-
+        // 分页数据必须使用 paginator 方法调用
         return $this->response->paginator($topics,new TopicTransformer());
 
     }
@@ -42,6 +42,11 @@ class TopicsController extends Controller
         return $this->response->paginator($topics,new TopicTransformer());
     }
 
+    public function show(Topic $topic)
+    {
+        return $this->response->item($topic,new TopicTransformer());
+    }
+
     public function store(TopicRequest $request,Topic $topic)
     {
         $topic->fill($request->all());
@@ -51,7 +56,6 @@ class TopicsController extends Controller
         return $this->response->item($topic,new TopicTransformer())
             ->setStatusCode(201);
     }
-
 
     public function update(TopicRequest $request, Topic $topic)
     {
