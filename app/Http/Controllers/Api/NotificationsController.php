@@ -15,7 +15,12 @@ class NotificationsController extends Controller
 
     }
 
-
+    public function stats()
+    {
+        return $this->response->array([
+            'unread_count' => $this->user()->notification_count,
+        ]);
+    }
 
 
 
