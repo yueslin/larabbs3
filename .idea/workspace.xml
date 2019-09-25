@@ -11,6 +11,7 @@
       <change afterPath="D:/docker/website/boke-newbie-90-day-sign/public/img/frontend/p7_7.png" afterDir="false" />
       <change afterPath="D:/docker/website/boke-newbie-90-day-sign/public/img/frontend/sds1.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Transformers/ReplyTransformer.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Transformers/ReplyTransformer.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
       <change beforePath="D:/docker/website/boke-newbie-90-day-sign/app/Api/Controller/CommonController.class.php" beforeDir="false" afterPath="D:/docker/website/boke-newbie-90-day-sign/app/Api/Controller/CommonController.class.php" afterDir="false" />
       <change beforePath="D:/docker/website/boke-newbie-90-day-sign/app/Api/Controller/LoginController.class.php" beforeDir="false" afterPath="D:/docker/website/boke-newbie-90-day-sign/app/Api/Controller/LoginController.class.php" afterDir="false" />
@@ -39,8 +40,20 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/api.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="69" column="11" lean-forward="true" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
+            <state relative-caret-position="280">
+              <caret line="44" column="47" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/Transformers/ReplyTransformer.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+              <folding>
+                <element signature="e#36#57#0#PHP" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -48,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+            <state relative-caret-position="305">
+              <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
               <folding>
                 <element signature="e#44#83#0#PHP" expanded="true" />
               </folding>
@@ -154,11 +167,11 @@
         <option value="$PROJECT_DIR$/app/Providers/AppServiceProvider.php" />
         <option value="$PROJECT_DIR$/app/Transformers/TopicTransformer.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/TopicsController.php" />
-        <option value="$PROJECT_DIR$/app/Transformers/ReplyTransformer.php" />
         <option value="$PROJECT_DIR$/app/Http/Requests/Api/ReplyRequest.php" />
         <option value="$PROJECT_DIR$/../../php/demo/识别DataMatrix/index.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
         <option value="$PROJECT_DIR$/routes/api.php" />
+        <option value="$PROJECT_DIR$/app/Transformers/ReplyTransformer.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php" />
       </list>
     </option>
@@ -290,8 +303,8 @@
     </include_path>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="240" />
-    <option name="y" value="367" />
+    <option name="x" value="181" />
+    <option name="y" value="402" />
     <option name="width" value="1569" />
     <option name="height" value="818" />
   </component>
@@ -340,13 +353,7 @@
               <item name="larabbs3" type="b2602c69:ProjectViewProjectNode" />
               <item name="larabbs3" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Policies" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="larabbs3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="larabbs3" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="Providers" type="462c0819:PsiDirectoryNode" />
+              <item name="Transformers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="larabbs3" type="b2602c69:ProjectViewProjectNode" />
@@ -445,15 +452,15 @@
       <workItem from="1569206025758" duration="12943000" />
       <workItem from="1569292609475" duration="11206000" />
       <workItem from="1569378530641" duration="5535000" />
-      <workItem from="1569395697641" duration="5053000" />
+      <workItem from="1569395697641" duration="7139000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="266209000" />
+    <option name="totallyTimeSpent" value="268295000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="240" y="367" width="1569" height="818" extended-state="0" />
+    <frame x="181" y="402" width="1569" height="818" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.31146455" />
@@ -848,16 +855,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/Transformers/ReplyTransformer.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-          <folding>
-            <element signature="e#36#57#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Requests/Api/ReplyRequest.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="355">
@@ -879,13 +876,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/api.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="69" column="11" lean-forward="true" selection-start-line="69" selection-start-column="11" selection-end-line="69" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/vendor/dingo/api/src/Http/Response/Factory.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="218">
@@ -893,10 +883,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/routes/api.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="44" column="47" lean-forward="true" selection-start-line="44" selection-start-column="47" selection-end-line="44" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/Transformers/ReplyTransformer.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="26" column="5" lean-forward="true" selection-start-line="26" selection-start-column="5" selection-end-line="26" selection-end-column="5" />
+          <folding>
+            <element signature="e#36#57#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/Http/Controllers/Api/RepliesController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="27" column="43" lean-forward="true" selection-start-line="27" selection-start-column="43" selection-end-line="27" selection-end-column="43" />
+        <state relative-caret-position="305">
+          <caret line="36" column="32" lean-forward="true" selection-start-line="36" selection-start-column="32" selection-end-line="36" selection-end-column="32" />
           <folding>
             <element signature="e#44#83#0#PHP" expanded="true" />
           </folding>
